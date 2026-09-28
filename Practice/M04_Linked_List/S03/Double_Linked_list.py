@@ -48,7 +48,9 @@ def traverse_reverse():
         current = current.prev
     print("None")
 traverse_reverse()
-'''
+
+
+
 
 #insert a node at the beginning
 class Node:
@@ -117,4 +119,5 @@ print()
 head = insert_at_position(head, 25, 2)
 print("Linked List after insertion at a given position:")
 traverse(head)
-print()
+print() 
+'''
