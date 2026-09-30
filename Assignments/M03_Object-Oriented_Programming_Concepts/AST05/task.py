@@ -1,47 +1,30 @@
 from abc import ABC, abstractmethod
-
 class Payment(ABC):
-
-```
-@abstractmethod
-def pay(self, amount):
     pass
-```
 
 class UPI(Payment):
-
-```
-def pay(self, amount):
-    print(f"Payment of {amount} successful using UPI")
-```
+    def pay(self, amount):
+        pass
 
 class CreditCard(Payment):
-
-```
-def pay(self, amount):
-    print(f"Payment of {amount} successful using CreditCard")
-```
+    def pay(self, amount):
+        pass
 
 class Cash(Payment):
+    def pay(self, amount):
+        pass
 
-```
-def pay(self, amount):
-    print(f"Payment of {amount} successful using Cash")
-```
+if __name__ == '__main__':
+    payment_type = input()
+    amount = int(input())
 
-if **name** == '**main**':
-payment_type = input()
-amount = int(input())
+    if payment_type == "UPI":
+        payment = UPI()
 
-```
-if payment_type == "UPI":
-    payment = UPI()
+    elif payment_type == "CreditCard":
+        payment = CreditCard()
 
-elif payment_type == "CreditCard":
-    payment = CreditCard()
+    else:
+        payment = Cash()
 
-else:
-    payment = Cash()
-
-payment.pay(amount)
-```
+    payment.pay(amount)
